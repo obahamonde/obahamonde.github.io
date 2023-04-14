@@ -1,0 +1,6 @@
+<template>
+<AppNav />
+<RouterView />
+   
+  
+</template>
