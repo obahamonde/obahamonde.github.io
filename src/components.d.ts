@@ -15,15 +15,8 @@ declare module '@vue/runtime-core' {
     AppPortfolio: typeof import('./components/AppPortfolio.vue')['default']
     Auth: typeof import('./components/Auth.vue')['default']
     Chart: typeof import('./components/Chart.vue')['default']
-    Footer: typeof import('./components/Footer.vue')['default']
-    NavBarTop: typeof import('./components/NavBarTop.vue')['default']
-    Portfolio: typeof import('./components/AppPortfolio.vue')['default']
-    README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Social: typeof import('./components/Social.vue')['default']
-    TheCounter: typeof import('./components/TheCounter.vue')['default']
-    TheFooter: typeof import('./components/TheFooter.vue')['default']
-    TheInput: typeof import('./components/TheInput.vue')['default']
   }
 }
