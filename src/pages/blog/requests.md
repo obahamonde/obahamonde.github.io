@@ -28,7 +28,7 @@ The event loop in Python uses an event queue to manage the scheduling of corouti
 
 We will compare the performance of two http modules, requests and aiohttp. The requests module is a synchronous http client for Python, while the aiohttp module is an asynchronous http module for Python.
 
-__Requests__
+**Requests**
 
 ```python
 
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 # Requests per second: 4.554166913513057n
 ```
 
-__Aiohttp__
+**Aiohttp**
 
 ```python
 import asyncio

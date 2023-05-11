@@ -1,11 +1,8 @@
 <template>
- 
-    <canvas ref="canvas" width="400" height="400"></canvas>
-  
+  <canvas ref="canvas" width="400" height="400"></canvas>
 </template>
 
-<script setup lang='ts'>
-
+<script setup lang="ts">
 import { Chart, ChartData, ChartOptions, registerables } from "chart.js";
 
 Chart.register(...registerables);
@@ -15,8 +12,14 @@ const sse = reactive({
   latency: [] as number[],
 });
 
-const { status, data:eventData, error, close, event, eventSource } = useEventSource("http://localhost:8000/api/latency")
-
+const {
+  status,
+  data: eventData,
+  error,
+  close,
+  event,
+  eventSource,
+} = useEventSource("http://localhost:8000/api/latency");
 
 const canvas = ref<HTMLCanvasElement | null>(null);
 
@@ -34,8 +37,7 @@ watch(
 );
 
 watch(error, (newVal) => {
-  if (newVal)
-  eventSource.value?.close();
+  if (newVal) eventSource.value?.close();
 });
 
 watch(status, (newVal) => {
@@ -49,7 +51,6 @@ watch(event, (newVal) => {
     close();
   }
 });
-
 
 const data: ChartData = {
   labels: sse.datetime,

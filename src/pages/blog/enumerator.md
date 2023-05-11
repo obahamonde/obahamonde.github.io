@@ -70,7 +70,7 @@ class Enumerator(object):
             if record[1] == 'MX':
                 record.pop(2)
         return dumps([Record(domain=self.domain, ttl=int(record[0]), type_=record[1], value=record[2]).dict() for record in responses])
- 
+
     @property
     def geo(self):
         """Get's geo information for a domain"""
@@ -89,7 +89,7 @@ class Enumerator(object):
                         response.append({"ip":str(ipval),"domain": f"{subdomain}.{self.domain}"})
                 except Exception:
         return dumps(response)
-    
+
     async def headers(self):
         """Get's all headers for a domain"""
         async with ClientSession(headers=browser_headers) as session:
@@ -124,7 +124,7 @@ async def enumerate_(domain: str):
             "records": loads(enumerator.records),
             "geo": loads(enumerator.geo),
             "subdomains": loads(enumerator.subdomains),
-    
+
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

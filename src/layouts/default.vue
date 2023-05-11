@@ -1,6 +1,6 @@
 <template>
-<AppNav />
-<RouterView />
-   
-  
+  <AppNav />
+  <RouterView />
+  <AppNotifier />
+  <AppMessages />
 </template>
