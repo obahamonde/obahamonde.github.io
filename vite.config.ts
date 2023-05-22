@@ -26,7 +26,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://obahamonde.smartpro.solutions/api",
+        target: "https://ob-be-fwuw7gz7oq-uc.a.run.app/api",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },

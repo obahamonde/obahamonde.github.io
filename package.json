@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "build": "vite-ssg build",
+    "build": "vite build",
     "dev": "vite --port 3000 --open"
   },
   "dependencies": {

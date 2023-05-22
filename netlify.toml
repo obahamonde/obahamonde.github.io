@@ -1,0 +1,19 @@
+[build.environment]
+  NODE_VERSION = "16"
+
+[build]
+  publish = "dist"
+  command = "pnpm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://ob-be-fwuw7gz7oq-uc.a.run.app/api/:splat"
+    status = 200
+    force = true
+    headers = {X-From = "Netlify"}
+
